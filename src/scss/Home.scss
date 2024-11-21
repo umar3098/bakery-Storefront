@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import 'variables';
+
+* {
+    font-family:"Poppins", sans-serif;
+}
+
+/* HOME PAGE */
+.home {
+    /*hr {
+        margin: auto;
+        width: calc((10px + 1vw)*40);     
+        //width:calc((10px + 1vw)*35);         
+        background-color: $grey;
+        height: 1px;
+        margin-top:-43px;
+        float:right;
+      }*/
+
+    /*Setting container to relative, and child divs to absolute means the
+    divs scale together*/
+    position: relative;
+    
+    .dots{
+        margin-left:50%;
+        margin-top:-40px;
+    }
+
+    .dot {
+        height: 15px;
+        width: 15px;
+        background-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        margin-left:5px;
+        border:2px solid $offWhite;
+    }
+
+    #active-dot{
+        background-color: $offWhite;
+    }
+
+    .banner-content{
+        position:absolute;
+        margin-left:10%;
+        margin-top:-34%;
+        padding:3vw;
+        //border: 5px solid $offWhite;
+        //text-align:center;
+        background-color: transparent;
+        //background-color: rgba(0,0,0, 0.2);
+
+        p {
+            margin-top:1vw;
+            margin-bottom:1vw;
+            background:none;
+            /*vw is % of viewport width*/
+            font-size:5vw;
+            font-weight: bold;
+            color:$offWhite;
+        }
+    }
+
+    button {
+        color:rgb(90, 90, 90);
+        //border:2px solid $lightPink;
+        /*border-radius:30px;
+        padding:15px;
+        padding-left:30px;
+        padding-right:30px;*/
+        padding:1.2vw;
+        padding-left:2vw;
+        padding-right:2vw;
+        border-radius:3vw;
+        
+        border:none;
+        transition: 0.3s;
+        &:hover{
+            background-color:$lightPink;
+            color:$offBlack;
+            cursor:pointer;
+        }
+    }
+
+    .featured-banner{
+        //color:$offBlack;
+        //text-align:center;
+        padding-left:20px;
+        padding-bottom:25px;
+        color:$cuteBrown;
+        font-size:calc(10px + 1vw);
+        padding-top:30px;
+        background-color: $offBlack;
+        font-weight: 400;
+
+        a{
+            
+            color:$cuteBrown;
+            font-weight: lighter;
+            float:right;
+            margin-right:40px;
+            background-color: $offBlack;
+        }
+
+        span{
+            font-size: calc(10px + 0.6vw);
+            background-color: $offBlack;
+            
+        }
+    }
+
+    #featured-desc{
+        width:50%;
+        margin-left:25%;
+        padding-bottom:30px;
+        padding-top:20px;
+        color:$cuteBrown;
+    }
+
+    .grid-container{
+        position:relative;
+        display:grid;
+        //grid-template-columns:20% 20% 20%;
+        grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+        /*justify-content: center;*/
+        text-align: center;
+        margin-bottom:50px;
+        padding-left:5%;
+        padding-right:5%;
+        margin-top:50px;
+        //gap:20px;
+        color:$offBlack;
+
+        .grid-item{
+            border-radius: 4%;
+            padding-left:30px;
+            padding-right:30px;
+            //box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+
+        img{
+            width:90%;
+            //min-width: 100px;
+            margin-bottom:15px;
+            margin-top:50px;
+            transition: .5s ease;
+        }
+
+        span{
+            //font-weight: bold;
+            font-size: 20px;
+        }
+    }
+
+    .overlay-cont{
+        position: relative;
+        width:100%;
+        
+        &:hover img{
+            opacity:0.2;
+        }
+
+        .overlay{
+            transition: .5s ease;
+            //background-color: $pink;
+            position:absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            //border-radius: 50%;
+            &:hover{
+                cursor:pointer;
+            }
+            
+        }
+
+        p{
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            color:$offBlack;
+            font-size: calc(6px + 1vw);
+        }
+    }
+
+    .overlay-cont:hover .overlay{
+        opacity: 0.9;
+    }
+}

@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+/* HOME PAGE */
+.home {
+  /*hr {
+      margin: auto;
+      width: calc((10px + 1vw)*40);     
+      //width:calc((10px + 1vw)*35);         
+      background-color: $grey;
+      height: 1px;
+      margin-top:-43px;
+      float:right;
+    }*/
+  /*Setting container to relative, and child divs to absolute means the
+  divs scale together*/
+  position: relative;
+}
+.home .dots {
+  margin-left: 50%;
+  margin-top: -40px;
+}
+.home .dot {
+  height: 15px;
+  width: 15px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 5px;
+  border: 2px solid #FEFDF3;
+}
+.home #active-dot {
+  background-color: #FEFDF3;
+}
+.home .banner-content {
+  position: absolute;
+  margin-left: 10%;
+  margin-top: -34%;
+  padding: 3vw;
+  background-color: transparent;
+}
+.home .banner-content p {
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  background: none;
+  /*vw is % of viewport width*/
+  font-size: 5vw;
+  font-weight: bold;
+  color: #FEFDF3;
+}
+.home button {
+  color: #5a5a5a;
+  /*border-radius:30px;
+  padding:15px;
+  padding-left:30px;
+  padding-right:30px;*/
+  padding: 1.2vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  border-radius: 3vw;
+  border: none;
+  transition: 0.3s;
+}
+.home button:hover {
+  background-color: #ffdae4;
+  color: #414141;
+  cursor: pointer;
+}
+.home .featured-banner {
+  padding-left: 20px;
+  padding-bottom: 25px;
+  color: #f5cb93;
+  font-size: calc(10px + 1vw);
+  padding-top: 30px;
+  background-color: #414141;
+  font-weight: 400;
+}
+.home .featured-banner a {
+  color: #f5cb93;
+  font-weight: lighter;
+  float: right;
+  margin-right: 40px;
+  background-color: #414141;
+}
+.home .featured-banner span {
+  font-size: calc(10px + 0.6vw);
+  background-color: #414141;
+}
+.home #featured-desc {
+  width: 50%;
+  margin-left: 25%;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  color: #f5cb93;
+}
+.home .grid-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /*justify-content: center;*/
+  text-align: center;
+  margin-bottom: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top: 50px;
+  color: #414141;
+}
+.home .grid-container .grid-item {
+  border-radius: 4%;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.home .grid-container img {
+  width: 90%;
+  margin-bottom: 15px;
+  margin-top: 50px;
+  transition: 0.5s ease;
+}
+.home .grid-container span {
+  font-size: 20px;
+}
+.home .overlay-cont {
+  position: relative;
+  width: 100%;
+}
+.home .overlay-cont:hover img {
+  opacity: 0.2;
+}
+.home .overlay-cont .overlay {
+  transition: 0.5s ease;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+.home .overlay-cont .overlay:hover {
+  cursor: pointer;
+}
+.home .overlay-cont p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #414141;
+  font-size: calc(6px + 1vw);
+}
+.home .overlay-cont:hover .overlay {
+  opacity: 0.9;
+}

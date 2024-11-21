@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import 'variables';
+
+* {
+    font-family:"Poppins", sans-serif;
+    //box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: $offWhite;
+}
+
+/* NAVIGATION */
+.navbar {
+    box-shadow: 0 5px 5px -2px rgba(0,0,0,.2);
+    /*position:fixed;
+    top:0;
+    left:0;
+    width:100%;*/
+    font-size:20px;
+    padding-bottom:25px;
+    padding-top:20px;
+
+    #logo-title{
+        color:$darkPink;
+        padding-right:20px;
+        padding-left:80px;
+        font-size:28px;
+        font-weight: bold;
+    }
+
+    #logo{
+        /*this makes the scroll bar disappear on hover for some reason
+        position:absolute;*/
+        padding-left:20px;
+        margin-top:22px;
+        
+    }
+
+    .icon{
+        margin-left:10px;
+        transition: all .2s ease-in-out;
+        &:hover{
+            opacity:0.6;
+            //transform: scale(1.5);
+        }
+    }
+
+    .iconLinks{
+        float:right;
+        margin-right:20px;
+        margin-top:-35px;
+        margin-bottom:20px;
+    }
+
+    .nav-links {  
+        .active {
+            color:$darkPink;
+        }
+        a, p{
+            text-decoration: none;
+            color:rgb(97, 97, 97);
+            padding-left:40px;
+            transition: 0.3s;
+            &:hover{
+                color:$darkPink;
+            }
+        }
+    }
+
+    .minLinks{
+        transition: 0.5s;
+        overflow: hidden;
+        p{
+            text-align: center;
+            padding-bottom:10px;
+            //padding-left:40%;
+        }
+    }
+}
+
+/* FOOTER */
+.footer{
+    padding:10px;
+    //position:absolute;
+    position:relative;
+    //bottom:0;
+    //margin-top: calc(2800px - 3*100vh);
+    margin-top:20vh;
+    left:0;
+    background-color:$cuteBrown;
+    text-align:center;
+
+}

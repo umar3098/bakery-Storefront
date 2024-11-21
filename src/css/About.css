@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+.about {
+  position: relative;
+  background-color: #FEFDF3;
+}
+.about .about-banner {
+  position: relative;
+}
+.about .about-banner img {
+  width: 100%;
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  margin: -5px 0px -10px 0px;
+}
+.about .text {
+  position: absolute;
+  text-align: center;
+  padding: 1.5vw;
+  border: 5px solid #FEFDF3;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #FEFDF3;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.about p {
+  background-color: transparent;
+  font-size: calc(6px + 1vw);
+}
+.about #title-text {
+  font-size: calc(8px + 3vw);
+  font-weight: bold;
+}
+.about #desc {
+  font-size: calc(6px + 1vw);
+}
+.about #cake {
+  width: 25%;
+}
+.about .content {
+  margin-top: 10%;
+}
+.about .content img {
+  margin-left: 20%;
+}
+.about .content .text-content {
+  margin-left: 50%;
+  margin-right: 10%;
+  margin-top: -28%;
+}
